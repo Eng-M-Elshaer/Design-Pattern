@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Observer___Notification_Pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male / Female" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-2M-au7">
+                                <rect key="frame" x="88" y="424" width="238" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQx-e4-j00">
+                                <rect key="frame" x="38" y="616" width="339" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Go for Selection"/>
+                                <connections>
+                                    <action selector="goForSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwu-49-Wiq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nGf-ye-nDV">
+                                <rect key="frame" x="108" y="244" width="198" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nGf-ye-nDV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="EeB-S1-V8o"/>
+                            <constraint firstItem="jaf-2M-au7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="H2n-ht-cAq"/>
+                            <constraint firstItem="nGf-ye-nDV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="HVS-Hv-mwe"/>
+                            <constraint firstItem="LQx-e4-j00" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="JJj-eA-crP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jaf-2M-au7" secondAttribute="trailing" constant="88" id="Kuh-Uy-MUc"/>
+                            <constraint firstItem="jaf-2M-au7" firstAttribute="top" secondItem="nGf-ye-nDV" secondAttribute="bottom" constant="132" id="TxD-cr-fJB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LQx-e4-j00" secondAttribute="trailing" constant="37" id="W8i-pZ-LJA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LQx-e4-j00" secondAttribute="bottom" constant="174" id="dJQ-af-0V3"/>
+                            <constraint firstItem="LQx-e4-j00" firstAttribute="top" secondItem="jaf-2M-au7" secondAttribute="bottom" constant="144" id="sJ2-Ty-K9L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nGf-ye-nDV" secondAttribute="trailing" constant="108" id="vcB-7p-7HZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectLable" destination="nGf-ye-nDV" id="aMv-qz-jD8"/>
+                        <outlet property="typeLabel" destination="jaf-2M-au7" id="JCB-do-8Er"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="117"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="Qkm-k6-wwM">
+            <objects>
+                <viewController storyboardIdentifier="Select" id="LQb-ne-7oW" customClass="SelectViewController" customModule="Observer___Notification_Pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5tH-Pj-itP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ST-a3-2N9">
+                                <rect key="frame" x="156" y="287" width="104" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Male"/>
+                                <connections>
+                                    <action selector="male:" destination="LQb-ne-7oW" eventType="touchUpInside" id="LPS-67-A72"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-Li-zGT">
+                                <rect key="frame" x="130" y="552" width="155" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Female"/>
+                                <connections>
+                                    <action selector="famale:" destination="LQb-ne-7oW" eventType="touchUpInside" id="Nec-yn-de3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aeH-Li-zGT" firstAttribute="leading" secondItem="kU1-o7-UnP" secondAttribute="leading" constant="130" id="HE8-EK-lRO"/>
+                            <constraint firstItem="3ST-a3-2N9" firstAttribute="top" secondItem="kU1-o7-UnP" secondAttribute="top" constant="243" id="SSM-U3-usJ"/>
+                            <constraint firstItem="aeH-Li-zGT" firstAttribute="top" secondItem="3ST-a3-2N9" secondAttribute="bottom" constant="193" id="Saj-Fl-nEe"/>
+                            <constraint firstItem="kU1-o7-UnP" firstAttribute="bottom" secondItem="aeH-Li-zGT" secondAttribute="bottom" constant="238" id="ZdW-TE-NS7"/>
+                            <constraint firstItem="kU1-o7-UnP" firstAttribute="trailing" secondItem="aeH-Li-zGT" secondAttribute="trailing" constant="129" id="jXD-eU-IoT"/>
+                            <constraint firstItem="kU1-o7-UnP" firstAttribute="trailing" secondItem="3ST-a3-2N9" secondAttribute="trailing" constant="154" id="pMM-3L-9wL"/>
+                            <constraint firstItem="3ST-a3-2N9" firstAttribute="leading" secondItem="kU1-o7-UnP" secondAttribute="leading" constant="156" id="vfX-3C-0ju"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kU1-o7-UnP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9C-tV-Zur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="117"/>
+        </scene>
+    </scenes>
+</document>
