@@ -10,19 +10,23 @@ import UIKit
 
 class BaseScreen: UIViewController {
 
+    //MARK:- Outlets
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
+    //MARK:- Propreties
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         chooseButton.layer.cornerRadius = chooseButton.frame.size.height/2
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
+    //MARK:- Actions
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
         let selectionVC = storyboard?.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
         selectionVC.selectionDelegate = self
@@ -30,13 +34,11 @@ class BaseScreen: UIViewController {
     }
 }
 
-
+//MARK:- SideSelectionDelegate
 extension BaseScreen: SideSelectionDelegate {
-    
     func didTapChoice(image: UIImage, name: String, color: UIColor) {
         mainImageView.image = image
         nameLabel.text = name
         view.backgroundColor = color
     }
-    
 }

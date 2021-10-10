@@ -14,17 +14,19 @@ protocol SideSelectionDelegate {
 
 class SelectionScreen: UIViewController {
     
+    //MARK:- Propreties
     var selectionDelegate: SideSelectionDelegate!
     
+    //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    //MARK:- Actions
     @IBAction func imperialButtonTapped(_ sender: UIButton) {
         selectionDelegate.didTapChoice(image: UIImage(named: "vader")!, name: "Darth Vader", color: .red)
         dismiss(animated: true, completion: nil)
     }
-
     @IBAction func rebelButtonTapped(_ sender: UIButton) {
         selectionDelegate.didTapChoice(image: UIImage(named: "luke")!, name: "Luke Skywalker", color: .cyan)
         dismiss(animated: true, completion: nil)
